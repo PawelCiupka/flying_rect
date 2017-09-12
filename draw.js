@@ -7,9 +7,11 @@ var figure = {
 	color: "#696",
 	x: canvas.width/2,
 	dx: 0,
+	defaultX: canvas.width/2,
 	defaultDX: 2,
 	y: canvas.height/2,
 	dy: 0,
+	defaultY: canvas.height/2,
 	defaultDY: 2
 	
 };
