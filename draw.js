@@ -9,19 +9,22 @@ var figure = {
 	dx: 0,
 	defaultX: canvas.width/2,
 	defaultDX: 2,
+	startDX: 2,
 	y: canvas.height/2,
 	dy: 0,
 	defaultY: canvas.height/2,
-	defaultDY: 2
-	
+	defaultDY: 2,
+	startDY: 2
 };
 
 var point = {
-	radius: 10,
+	radius: 15,
 	color: "#f45641",
 	x: canvas.width/2, 
 	y: canvas.height/2,
-	q: 0
+	i: 0,
+	ifPT: false,
+	time: 0
 };
 
 var score = {
@@ -54,5 +57,13 @@ function drawScore() {
 	ctx.font = "16px Dosis";
 	ctx.fillStyle = score.color;
 	ctx.fillText("Score: "+score.s, 8, 20);
+	ctx.closePath();
+}
+
+function checkPointTime() {
+	ctx.beginPath();
+	ctx.font = "16px Dosis";
+	ctx.fillStyle = "#red";
+	ctx.fillText("I: "+point.i+" | pointTime: "+point.time, 70, 20);
 	ctx.closePath();
 }

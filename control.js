@@ -108,3 +108,19 @@ function pointPosition() {
 	point.x = Math.floor(Math.random() * canvas.width);
 	point.y = Math.floor(Math.random() * canvas.height);
 }
+
+function randomPoint() {
+	if(!point.ifPT) {
+		point.time = Math.floor(Math.random() * 400) + 200;
+		pointPosition();
+		point.ifPT = true;
+		point.i = 0;
+	}
+	else if(point.i > point.time) {
+		point.ifPT = false;
+	}
+	else if(point.ifPT) {
+		point.i += 1;
+		drawPoint();
+	}
+}

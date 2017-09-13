@@ -1,3 +1,7 @@
+var i = 1;
+var ifPointTime = false;
+var pointTime;
+
 function draw() {
 	collisionWall();
 	collisionPoint()
@@ -5,8 +9,8 @@ function draw() {
 	controlFigure();
 	drawFigure();
 
-	pointPosition();
-	drawPoint();
+	randomPoint();
+	checkPointTime();
 
 	drawScore();
 
