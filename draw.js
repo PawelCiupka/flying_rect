@@ -2,9 +2,8 @@ var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
 var figure = {
-	width: 15,
-	height: 15,
-	color: "#500",
+	radius: 10,
+	color: "#181830",
 	x: canvas.width/2,
 	dx: 0,
 	defaultX: canvas.width/2,
@@ -14,21 +13,23 @@ var figure = {
 	dy: 0,
 	defaultY: canvas.height/2,
 	defaultDY: 2,
-	startDY: 2
+	startDY: 2,
+	acceleration: 0.1
 };
 
 var point = {
-	radius: 15,
-	color: "#f45641",
+	radius: 6,
+	color: "#006060",
 	x: canvas.width/2, 
 	y: canvas.height/2,
 	i: 0,
 	ifPT: false,
-	time: 0
+	time: 0,
+	status: 1
 };
 
 var score = {
-	s: 0,
+	s: -1,
 	style: "32px Dosis",
 	color: "#000",
 	x: 8, 
@@ -38,7 +39,7 @@ var score = {
 function drawFigure() {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	ctx.beginPath();
-	ctx.rect(figure.x, figure.y, figure.width, figure.height);
+	ctx.arc(figure.x, figure.y, figure.radius, 0, Math.PI*2);
 	ctx.fillStyle = figure.color;
 	ctx.fill();
 	ctx.closePath();

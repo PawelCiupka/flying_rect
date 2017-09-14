@@ -10,7 +10,7 @@ function draw() {
 	drawFigure();
 
 	randomPoint();
-	checkPointTime();
+	//checkPointTime();
 
 	drawScore();
 

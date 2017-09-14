@@ -42,6 +42,17 @@ function keyUpHandler(e) {
 	}
 }
 
+// --- MOUSE STERING ---
+// document.addEventListener("mousemove", mouseMoveHandler, false);
+// function mouseMoveHandler(e) {	// wykrywa ruch myszki
+// 	var relativeX = e.clientX - canvas.offsetLeft;
+// 	var relativeY = e.clientY - canvas.offsetTop;
+
+// 	figure.x = relativeX - figure.radius/2;
+// 	figure.y = relativeY - figure.radius/2;
+	
+// }
+
 function controlFigure() {
 	if(leftPressed) {
 		if(!rightPressed){
@@ -118,9 +129,13 @@ function randomPoint() {
 	}
 	else if(point.i > point.time) {
 		point.ifPT = false;
+		point.status = 1;
 	}
 	else if(point.ifPT) {
 		point.i += 1;
-		drawPoint();
+		if(point.status == 1) {
+			drawPoint();
+		}
+		
 	}
 }
