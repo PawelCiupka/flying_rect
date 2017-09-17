@@ -1,1 +1,1 @@
-Oto przedstawiam latający prostokąt!
+Flying figure!!!
