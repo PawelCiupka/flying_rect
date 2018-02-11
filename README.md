@@ -1,1 +1,1 @@
-Flying figure!!!
+Celem gry flying_figure jest zebranie jak największej liczby punktów sterowaną przez nas kuleczką. Wydaję się banalne, co? Lecz niech Cię nie zwiedzie początkowa prędkość kuleczki, która rośnie proporcjonalnie z ilością zebranych punktów.
